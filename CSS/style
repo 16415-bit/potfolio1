@@ -1,0 +1,156 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Kanit',sans-serif;
+}
+
+body{
+
+    background:#FFEFF7;
+
+    color:#444;
+
+}
+
+/* เมนู */
+
+header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 60px;
+
+    background:#FFD6E8;
+
+    position:sticky;
+
+    top:0;
+
+}
+
+.logo{
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    color:#d63384;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+}
+
+nav li{
+
+    margin-left:25px;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:#d63384;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:white;
+
+}
+
+/* Hero */
+
+.hero{
+
+    text-align:center;
+
+    padding:80px 20px;
+
+}
+
+.hero img{
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    border:6px solid white;
+
+    box-shadow:0 0 20px pink;
+
+}
+
+.hero h1{
+
+    margin-top:20px;
+
+    font-size:48px;
+
+    color:#d63384;
+
+}
+
+.hero h2{
+
+    margin-top:10px;
+
+    color:#666;
+
+}
+
+.hero p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    margin-top:20px;
+
+    line-height:1.8;
+
+}
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:30px;
+
+    padding:15px 40px;
+
+    background:#ff80ab;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    background:#ec407a;
+
+}
