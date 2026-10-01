@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ประวัติส่วนตัว | My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">🌸 My Portfolio</div>
+      <ul class="nav-links">
+        <li><a href="index.html">หน้าหลัก</a></li>
+        <li><a href="profile.html" class="active">ประวัติส่วนตัว</a></li>
+        <li><a href="education.html">ประวัติการศึกษา</a></li>
+        <li><a href="activities.html">ผลงาน/กิจกรรม</a></li>
+        <li><a href="contact.html">ติดต่อ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>👤 ข้อมูลส่วนตัว</h2>
+      <hr style="border: none; border-top: 2px solid var(--secondary-color); margin-bottom: 1.5rem;">
+      <p><strong>ชื่อ-นามสกุล:</strong> นาย/นางสาว [ใส่ชื่อของคุณ]</p>
+      <p><strong>ชื่อเล่น:</strong> [ชื่อเล่น]</p>
+      <p><strong>วันเกิด:</strong> [วัน/เดือน/ปีเกิด]</p>
+      <p><strong>คติประจำใจ:</strong> "ความพยายามไม่เคยทำร้ายคนที่ตั้งใจจริง"</p>
+      <p><strong>งานอดิเรก:</strong> อ่านหนังสือ, ฟังเพลง, เขียนโค้ด</p>
+    </div>
+
+    <div class="card">
+      <h2>💡 ทักษะความสามารถ (Skills)</h2>
+      <hr style="border: none; border-top: 2px solid var(--secondary-color); margin-bottom: 1.5rem;">
+      <ul style="list-style-type: square; padding-left: 1.5rem;">
+        <li>HTML / CSS (ระดับพื้นฐาน)</li>
+        <li>การสื่อสารภาษาอังกฤษ</li>
+        <li>การทำงานร่วมกับผู้อื่น (Teamwork)</li>
+        <li>การแก้ปัญหาและคิดวิเคราะห์</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Portfolio by Student M.6. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
