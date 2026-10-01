@@ -1,156 +1,146 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Kanit',sans-serif;
+/* นำเข้าฟอนต์ Kanit จาก Google Fonts ให้ดูทันสมัยและอ่านง่าย */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+
+/* กำหนดตัวแปรสีพาสเทล */
+:root {
+  --bg-color: #fff5f7;        /* สีพื้นหลังชมพูอ่อนมาก */
+  --card-bg: #ffffff;         /* สีพื้นหลังการ์ดเนื้อหา */
+  --primary-color: #f7a8b8;   /* สีชมพูพาสเทลหลัก */
+  --secondary-color: #fcd5ce; /* สีชมพูอมส้มพาสเทล */
+  --accent-color: #e56b8f;    /* สีชมพูเข้มเน้นข้อความ/ปุ่ม */
+  --text-color: #4a4a4a;      /* สีข้อความหลัก */
+  --nav-bg: #ffb7c5;         /* สีแถบเมนู */
 }
 
-body{
-
-    background:#FFEFF7;
-
-    color:#444;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kanit', sans-serif;
 }
 
-/* เมนู */
-
-header{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:20px 60px;
-
-    background:#FFD6E8;
-
-    position:sticky;
-
-    top:0;
-
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.logo{
-
-    font-size:28px;
-
-    font-weight:bold;
-
-    color:#d63384;
-
+/* ส่วนหัวและเมนูนำทาง (Navigation Bar) */
+header {
+  background-color: var(--nav-bg);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
-nav ul{
-
-    display:flex;
-
-    list-style:none;
-
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-nav li{
-
-    margin-left:25px;
-
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
 }
 
-nav a{
-
-    text-decoration:none;
-
-    color:#d63384;
-
-    font-size:18px;
-
-    transition:.3s;
-
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
 }
 
-nav a:hover{
-
-    color:white;
-
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
 }
 
-/* Hero */
-
-.hero{
-
-    text-align:center;
-
-    padding:80px 20px;
-
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: #ffffff;
+  color: var(--accent-color);
 }
 
-.hero img{
-
-    width:220px;
-
-    height:220px;
-
-    border-radius:50%;
-
-    border:6px solid white;
-
-    box-shadow:0 0 20px pink;
-
+/* คอนเทนเนอร์หลักของเนื้อหา */
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  flex: 1;
+  width: 100%;
 }
 
-.hero h1{
-
-    margin-top:20px;
-
-    font-size:48px;
-
-    color:#d63384;
-
+.card {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(247, 168, 184, 0.2);
+  margin-bottom: 2rem;
 }
 
-.hero h2{
-
-    margin-top:10px;
-
-    color:#666;
-
+h1, h2, h3 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
 }
 
-.hero p{
-
-    max-width:700px;
-
-    margin:auto;
-
-    margin-top:20px;
-
-    line-height:1.8;
-
+/* ส่วนท้ายเพจ Footer */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
 }
 
-.btn{
-
-    display:inline-block;
-
-    margin-top:30px;
-
-    padding:15px 40px;
-
-    background:#ff80ab;
-
-    color:white;
-
-    text-decoration:none;
-
-    border-radius:30px;
-
-    transition:.3s;
-
+/* ปุ่มกดสไตล์พาสเทล */
+.btn {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover {
+  background-color: #d15277;
+}
 
-    background:#ec407a;
+/* การรองรับหน้าจอโทรศัพท์มือถือ (Responsive) */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
 
+  .nav-links a {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .card {
+    padding: 1.5rem;
+  }
 }
